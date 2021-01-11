@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import BasicInfo from "./BasicInfo/BasicInfo";
+import Aux from "./hoc/Aux";
 
 class App extends Component {
     constructor(props) {
@@ -32,7 +33,7 @@ class App extends Component {
     }
     render() {
         return (
-            <>
+            <Aux>
                 {this.state.persons.map((person) => {
                     return (
                         <BasicInfo
@@ -44,7 +45,7 @@ class App extends Component {
                         />
                     );
                 })}
-            </>
+            </Aux>
         );
     }
 }
