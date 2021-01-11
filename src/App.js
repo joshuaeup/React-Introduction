@@ -3,11 +3,13 @@ import "./App.css";
 import BasicInfo from "./BasicInfo/BasicInfo";
 import Aux from "./hoc/Aux";
 
+// Component to manage state
 class App extends Component {
     constructor(props) {
         // So that this.props is not undefined.
         // Allows child class to inherit
         super(props);
+        // Persons array set as state
         this.state = {
             persons: [
                 {
@@ -33,9 +35,12 @@ class App extends Component {
     }
     render() {
         return (
+            // Aux is used to wrap content
             <Aux>
+                {/* Loop through array then return each individual persons data from obj */}
                 {this.state.persons.map((person) => {
                     return (
+                        // "Key" is used to provide a primary id for each index
                         <BasicInfo
                             key={person.number}
                             name={person.name}

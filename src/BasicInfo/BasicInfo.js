@@ -1,6 +1,6 @@
 // Import react to create react element (after transpile)
 import React from "react";
-
+// Component to render front end
 const BasicInfo = (props) => {
     return (
         <div className="App">
